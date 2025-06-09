@@ -12,51 +12,45 @@
 
     body {
       margin: 0;
-      padding: 0;
+      padding: 15px;
       background-color: #4f9d95;
       color: black;
       font-family: 'Cigars', sans-serif;
-      font-size: 29px;
-      line-height: 35px;
+      font-size: 26px;
+      line-height: 32px;
     }
 
     .container {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 15px;
-      padding: 15px;
-      max-width: 1500px;
+      max-width: calc(100vw - 30px);
       margin: 0 auto;
-      box-sizing: border-box;
     }
 
-    .col-span-2 {
-      grid-column: span 2;
-    }
-
-    .col-span-1 {
-      grid-column: span 1;
+    .portrait-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
     .portrait {
       width: 100%;
+      max-width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-top: auto;
+      margin-top: 2rem;
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 1.5em;
-    }
-
-    h3 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
+    p, li, h1, h2, h3 {
+      margin: 0 0 1rem 0;
+      font-size: inherit;
+      font-weight: normal;
     }
 
     ul {
       padding-left: 1.5rem;
+      margin: 0 0 2rem 0;
     }
 
     a {
@@ -65,7 +59,7 @@
     }
 
     blockquote {
-      margin: 0;
+      margin: 0 0 2rem 0;
       padding: 0;
     }
 
@@ -74,21 +68,22 @@
       bottom: 20px;
       left: 20px;
       display: flex;
-      gap: 10px;
+      gap: 12px;
       z-index: 1000;
     }
 
     .lang-toggle button {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       border: 1px solid black;
       background-color: transparent;
       color: black;
       font-family: inherit;
-      font-size: 1rem;
+      font-size: 26px;
       cursor: pointer;
       text-align: center;
+      line-height: 1;
       padding: 0;
     }
 
@@ -101,12 +96,9 @@
       .container {
         display: block;
       }
-      .col-span-2, .col-span-1 {
-        grid-column: auto;
-        margin-bottom: 2rem;
-      }
       .portrait {
-        max-width: 50%;
+        width: 50%;
+        max-width: 200px;
       }
     }
   </style>
@@ -118,35 +110,34 @@
   </div>
 
   <div class="container">
-    <!-- ZITAT -->
-    <div class="col-span-2" id="quote-de">
+    <!-- SPALTE 1: Zitat -->
+    <div id="quote-de">
       <p>
-        „Therapie bedeutet, etwas herauszufinden. Sie dreht sich in erster Linie um Entdeckungen, nämlich um die Frage, wer du bist, und um deine tiefsten emotionalen Einstellungen. Es geht nicht nur darum, wer du glaubst, zu sein. Es geht nicht um etwas, dass du nur intellektuell begreifen kannst. Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“  
+        Therapie bedeutet, etwas herauszufinden. Sie dreht sich in erster Linie um Entdeckungen, nämlich um die Frage, wer du bist, und um deine tiefsten emotionalen Einstellungen. Es geht nicht nur darum, wer du glaubst, zu sein. Es geht nicht um etwas, das du nur intellektuell begreifen kannst. Es geht darum, wer du im tiefsten Grunde deines Herzens bist.<br>
         – Ron Kurtz, Gründer der Hakomi®-Methode
       </p>
     </div>
-    <div class="col-span-2" id="quote-en" style="display:none;">
+    <div id="quote-en" style="display:none;">
       <p>
-        “Therapy is first about discovering. It’s about who you are and about what your deepest emotional attitudes are. It’s not just about who you think you are. It’s not opinion. It’s not something you can know with the intellect. It’s about who you are in the very heart of yourself. That’s the flavor of psychotherapy, discovering yourself, discovering your real attitudes toward the most important pieces of your life.”  
+        Therapy is first about discovering. It’s about who you are and about what your deepest emotional attitudes are. It’s not just about who you think you are. It’s not opinion. It’s not something you can know with the intellect. It’s about who you are in the very heart of yourself.<br>
         — Ron Kurtz, Hakomi Founder
       </p>
     </div>
 
-    <!-- PROFIL DE -->
-    <div class="col-span-2" id="profil-de">
-      <h1>Pascal Storz<br>Psychotherapie und Coaching</h1>
+    <!-- SPALTE 2: Profil -->
+    <div id="profil-de">
+      <p>Pascal Storz<br>Psychotherapie und Coaching</p>
       <ul>
         <li>Zertifizierter Hakomi Therapeut und Dozent (Trainer)</li>
         <li>R-CS Therapeut und Facilitator</li>
         <li>Heilpraktiker für Psychotherapie</li>
       </ul>
-      <h3>Methoden</h3>
+      <p>Methoden:</p>
       <ul>
         <li>Hakomi – Achtsamkeitszentrierte Körperpsychotherapie</li>
         <li>Re-Creation of the Self (R-CS)</li>
       </ul>
-      <h3>Kontakt</h3>
-      <p>
+      <p>Kontakt:<br>
         +49 (0)176 650 37 164<br>
         <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
         Praxis am Ufer<br>
@@ -156,21 +147,19 @@
       <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
     </div>
 
-    <!-- PROFIL EN -->
-    <div class="col-span-2" id="profil-en" style="display:none;">
-      <h1>Pascal Storz<br>Psychotherapy and Coaching</h1>
+    <div id="profil-en" style="display:none;">
+      <p>Pascal Storz<br>Psychotherapy and Coaching</p>
       <ul>
         <li>Certified Hakomi therapist and trainer</li>
         <li>R-CS therapist and facilitator</li>
         <li>Heilpraktiker für Psychotherapie</li>
       </ul>
-      <h3>Approaches</h3>
+      <p>Approaches:</p>
       <ul>
         <li>Hakomi – Mindful Somatic Psychotherapy</li>
         <li>Re-Creation of the Self (R-CS)</li>
       </ul>
-      <h3>Contact</h3>
-      <p>
+      <p>Contact:<br>
         +49 (0)176 650 37 164<br>
         <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
         Praxis am Ufer<br>
@@ -180,50 +169,50 @@
       <p><strong>My website is currently under construction</strong></p>
     </div>
 
-    <!-- PORTRAIT -->
-    <div class="col-span-1">
-      <img src="Pascal_Storz.jpg" alt="Pascal Storz" class="portrait" />
-    </div>
-    <!-- LINKS DE -->
-    <div class="col-span-2" id="links-de">
-      <h3>Weitere Informationen</h3>
-      <ul>
-        <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
-        <li><a href="https://hakomi.de/82/hakomi/lehrteam" target="_blank">hakomi.de</a></li>
-        <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
-        <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
-      </ul>
-      <h3>Veranstaltungen, Workshops und Fortbildungen</h3>
-      <ul>
-        <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de Termine</a></li>
-        <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de</a></li>
-        <li><a href="https://festivalsoma.com/events/" target="_blank">festivalsoma.com</a></li>
-        <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/" target="_blank">kientalerhof.ch</a></li>
-      </ul>
-    </div>
+    <!-- SPALTE 3: Bild & Links -->
+    <div class="portrait-container">
+      <div id="links-de">
+        <p>Weitere Informationen:</p>
+        <ul>
+          <li><a href="https://www.therapie.de/profil/pascal.storz/">therapie.de</a></li>
+          <li><a href="https://hakomi.de/82/hakomi/lehrteam">hakomi.de</a></li>
+          <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/">hakomiinstitute.com</a></li>
+          <li><a href="https://organisches-selbst.de/team/">organisches-selbst.de</a></li>
+        </ul>
+        <p>Veranstaltungen, Workshops und Fortbildungen:</p>
+        <ul>
+          <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht">hakomi.de Termine</a></li>
+          <li><a href="https://organisches-selbst.de/termine/">organisches-selbst.de</a></li>
+          <li><a href="https://festivalsoma.com/events/">festivalsoma.com</a></li>
+          <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/">kientalerhof.ch</a></li>
+        </ul>
+      </div>
 
-    <!-- LINKS EN -->
-    <div class="col-span-2" id="links-en" style="display:none;">
-      <h3>More about me</h3>
-      <ul>
-        <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
-        <li><a href="https://hakomi.de/82/hakomi/lehrteam" target="_blank">hakomi.de</a></li>
-        <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
-        <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
-      </ul>
-      <h3>Upcoming events, workshops and trainings</h3>
-      <ul>
-        <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de events</a></li>
-        <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de</a></li>
-        <li><a href="https://festivalsoma.com/events/" target="_blank">festivalsoma.com</a></li>
-        <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/" target="_blank">kientalerhof.ch</a></li>
-      </ul>
+      <div id="links-en" style="display:none;">
+        <p>More about me:</p>
+        <ul>
+          <li><a href="https://www.therapie.de/profil/pascal.storz/">therapie.de</a></li>
+          <li><a href="https://hakomi.de/82/hakomi/lehrteam">hakomi.de</a></li>
+          <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/">hakomiinstitute.com</a></li>
+          <li><a href="https://organisches-selbst.de/team/">organisches-selbst.de</a></li>
+        </ul>
+        <p>Upcoming events, workshops and trainings:</p>
+        <ul>
+          <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht">hakomi.de events</a></li>
+          <li><a href="https://organisches-selbst.de/termine/">organisches-selbst.de</a></li>
+          <li><a href="https://festivalsoma.com/events/">festivalsoma.com</a></li>
+          <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/">kientalerhof.ch</a></li>
+        </ul>
+      </div>
+
+      <img src="Pascal_Storz.jpg" alt="Pascal Storz Portrait" class="portrait" />
     </div>
-  </div>
+  </div> <!-- Ende .container -->
 
   <script>
     function setLang(lang) {
       const isDE = lang === 'de';
+
       document.getElementById('quote-de').style.display = isDE ? '' : 'none';
       document.getElementById('quote-en').style.display = isDE ? 'none' : '';
       document.getElementById('profil-de').style.display = isDE ? '' : 'none';
