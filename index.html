@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pascal Storz – Psychotherapie & Coaching</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     @font-face {
       font-family: 'Cigars';
@@ -12,111 +13,118 @@
 
     body {
       margin: 0;
+      background-color: #4f9d95;
+      color: #fff;
       font-family: 'Cigars', sans-serif;
-      background-color: #f7f4ef;
-      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    .language-switch {
+    .lang-switch {
       text-align: right;
       padding: 1rem;
     }
 
-    .language-switch button {
-      margin-left: 0.5rem;
-      padding: 0.3rem 0.8rem;
+    .lang-switch button {
       font-family: inherit;
-      font-size: 1rem;
-      background-color: #ddd;
-      border: none;
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      margin-left: 0.5rem;
+      border-radius: 5px;
       cursor: pointer;
-      border-radius: 4px;
     }
 
     .container {
       display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
       padding: 2rem;
-      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      flex-wrap: wrap;
     }
 
     .column {
       flex: 1;
-      min-width: 260px;
+      padding: 1rem;
+      min-width: 280px;
+      box-sizing: border-box;
     }
 
     img.portrait {
       width: 100%;
-      max-width: 250px;
-      border-radius: 8px;
-    }
-
-    blockquote {
-      font-style: italic;
-      border-left: 4px solid #ccc;
-      padding-left: 1rem;
-      margin: 1rem 0 2rem;
-      color: #555;
+      max-width: 280px;
+      border-radius: 10px;
+      display: block;
+      margin-top: 1rem;
     }
 
     h1 {
-      margin-top: 0;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     ul {
       padding-left: 1.2rem;
-      list-style: disc;
     }
 
     a {
-      color: #004466;
-      text-decoration: none;
+      color: #fff;
+      text-decoration: underline;
     }
 
-    a:hover {
-      text-decoration: underline;
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid #fff;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
     }
 
     @media (max-width: 800px) {
       .container {
         flex-direction: column;
-        padding: 1rem;
-      }
-      .language-switch {
-        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-  <div class="language-switch">
-    <button onclick="showLanguage('de')">DE</button>
-    <button onclick="showLanguage('en')">EN</button>
+  <div class="lang-switch">
+    <button onclick="showLang('de')">DE</button>
+    <button onclick="showLang('en')">EN</button>
   </div>
 
   <div class="container">
+    <!-- ZITAT -->
     <div class="column">
-      <blockquote id="quote-de">„Therapie bedeutet, etwas herauszufinden ... Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“<br>– Ron Kurtz</blockquote>
-      <blockquote id="quote-en" style="display:none;">“Therapy is first about discovering ... who you are in the very heart of yourself.”<br>– Ron Kurtz</blockquote>
-      <img src="Pascal_Storz.jpg" alt="Pascal Storz Portrait" class="portrait" />
+      <blockquote id="quote-de">
+        „Therapie bedeutet, etwas herauszufinden. [...] Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“<br>– Ron Kurtz
+      </blockquote>
+      <blockquote id="quote-en" style="display: none;">
+        “Therapy is first about discovering [...] who you are in the very heart of yourself.”<br>– Ron Kurtz
+      </blockquote>
+      <img src="Pascal_Storz.jpg" alt="Pascal Storz" class="portrait" />
     </div>
 
-    <div class="column" id="text-de">
+    <!-- PROFIL -->
+    <div class="column" id="profil-de">
       <h1>Pascal Storz<br>Psychotherapie und Coaching</h1>
       <ul>
         <li>Zertifizierter Hakomi Therapeut und Dozent (Trainer)</li>
         <li>R-CS Therapeut und Facilitator</li>
         <li>Heilpraktiker für Psychotherapie</li>
       </ul>
-
       <h3>Methoden</h3>
       <ul>
         <li>Hakomi – Achtsamkeitszentrierte Körperpsychotherapie</li>
         <li>Re-Creation of the Self (R-CS)</li>
       </ul>
-
       <h3>Kontakt</h3>
       <p>
         +49 (0)176 650 37 164<br>
@@ -125,24 +133,21 @@
         Heckmannufer 6A<br>
         10997 Berlin
       </p>
-
       <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
     </div>
 
-    <div class="column" id="text-en" style="display:none;">
+    <div class="column" id="profil-en" style="display: none;">
       <h1>Pascal Storz<br>Psychotherapy and Coaching</h1>
       <ul>
         <li>Certified Hakomi therapist and trainer</li>
         <li>R-CS therapist and facilitator</li>
         <li>Heilpraktiker für Psychotherapie</li>
       </ul>
-
       <h3>Approaches</h3>
       <ul>
         <li>Hakomi – Mindful Somatic Psychotherapy</li>
         <li>Re-Creation of the Self (R-CS)</li>
       </ul>
-
       <h3>Contact</h3>
       <p>
         +49 (0)176 650 37 164<br>
@@ -151,22 +156,54 @@
         Heckmannufer 6A<br>
         10997 Berlin
       </p>
-
       <p><strong>My website is currently under construction</strong></p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="column" id="links-de">
+      <h3>Weitere Informationen</h3>
+      <ul>
+        <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
+        <li><a href="https://hakomi.de/82/hakomi/lehrteam" target="_blank">hakomi.de</a></li>
+        <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
+        <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
+      </ul>
+      <h3>Veranstaltungen</h3>
+      <ul>
+        <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de Termine</a></li>
+        <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de</a></li>
+        <li><a href="https://festivalsoma.com/events/" target="_blank">festivalsoma.com</a></li>
+        <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/" target="_blank">kientalerhof.ch</a></li>
+      </ul>
+    </div>
+
+    <div class="column" id="links-en" style="display: none;">
+      <h3>More about me</h3>
+      <ul>
+        <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
+        <li><a href="https://hakomi.de/82/hakomi/lehrteam" target="_blank">hakomi.de</a></li>
+        <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
+        <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
+      </ul>
+      <h3>Events & Workshops</h3>
+      <ul>
+        <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de events</a></li>
+        <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de</a></li>
+        <li><a href="https://festivalsoma.com/events/" target="_blank">festivalsoma.com</a></li>
+        <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/" target="_blank">kientalerhof.ch</a></li>
+      </ul>
     </div>
   </div>
 
   <script>
-    function showLanguage(lang) {
-      const deElements = document.querySelectorAll('#text-de, #quote-de');
-      const enElements = document.querySelectorAll('#text-en, #quote-en');
-      if (lang === 'de') {
-        deElements.forEach(el => el.style.display = '');
-        enElements.forEach(el => el.style.display = 'none');
-      } else {
-        enElements.forEach(el => el.style.display = '');
-        deElements.forEach(el => el.style.display = 'none');
-      }
+    function showLang(lang) {
+      const showDE = lang === 'de';
+      document.getElementById('quote-de').style.display = showDE ? '' : 'none';
+      document.getElementById('quote-en').style.display = showDE ? 'none' : '';
+      document.getElementById('profil-de').style.display = showDE ? '' : 'none';
+      document.getElementById('profil-en').style.display = showDE ? 'none' : '';
+      document.getElementById('links-de').style.display = showDE ? '' : 'none';
+      document.getElementById('links-en').style.display = showDE ? 'none' : '';
     }
   </script>
 </body>
