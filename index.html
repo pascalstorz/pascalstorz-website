@@ -32,15 +32,8 @@
       grid-column: span 2;
     }
 
-    .col-span-1 {
-      grid-column: span 1;
-    }
-
-    .portrait-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 100%;
+    .col-span-2-end {
+      grid-column: 5 / span 2;
     }
 
     .portrait {
@@ -54,16 +47,13 @@
       margin: 0 0 1rem 0;
       font-size: inherit;
       font-weight: normal;
+      line-height: 32px;
     }
 
     ul {
       padding-left: 1.5rem;
       margin: 0 0 2rem 0;
       list-style: disc;
-    }
-
-    li {
-      line-height: 32px;
     }
 
     a {
@@ -157,7 +147,7 @@
       <p>My website is currently under construction</p>
     </div>
 
-    <div class="col-span-2 portrait-container">
+    <div class="col-span-2-end">
       <div id="links-de">
         <p>Weitere Informationen:</p>
         <ul>
