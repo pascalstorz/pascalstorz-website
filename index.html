@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pascal Storz – Psychotherapie & Coaching</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     @font-face {
       font-family: 'Cigars';
@@ -14,56 +13,30 @@
     body {
       margin: 0;
       background-color: #4f9d95;
-      color: #fff;
-      font-family: 'Cigars', sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    .lang-switch {
-      text-align: right;
-      padding: 1rem;
-    }
-
-    .lang-switch button {
-      font-family: inherit;
-      background: transparent;
-      border: 1px solid white;
       color: white;
-      padding: 0.4rem 0.8rem;
-      margin-left: 0.5rem;
-      border-radius: 5px;
-      cursor: pointer;
+      font-family: 'Cigars', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 2rem;
+      flex-wrap: wrap;
       max-width: 1400px;
       margin: 0 auto;
-      flex-wrap: wrap;
+      padding: 2rem;
     }
 
     .column {
       flex: 1;
-      padding: 1rem;
       min-width: 280px;
       box-sizing: border-box;
-    }
-
-    img.portrait {
-      width: 100%;
-      max-width: 280px;
-      border-radius: 10px;
-      display: block;
-      margin-top: 1rem;
+      padding: 1rem;
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      margin-top: 0;
     }
 
     h3 {
@@ -76,18 +49,55 @@
     }
 
     a {
-      color: #fff;
+      color: white;
       text-decoration: underline;
     }
 
     blockquote {
       font-style: italic;
-      border-left: 4px solid #fff;
+      border-left: 4px solid white;
       padding-left: 1rem;
       margin-bottom: 2rem;
     }
 
-    @media (max-width: 800px) {
+    img.portrait {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    /* Sprachumschalter-Kreise */
+    .lang-toggle {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+
+    .lang-toggle button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid black;
+      background-color: transparent;
+      color: black;
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .lang-toggle button.active {
+      background-color: black;
+      color: #4f9d95;
+    }
+
+    @media (max-width: 850px) {
       .container {
         flex-direction: column;
       }
@@ -95,9 +105,9 @@
   </style>
 </head>
 <body>
-  <div class="lang-switch">
-    <button onclick="showLang('de')">DE</button>
-    <button onclick="showLang('en')">EN</button>
+  <div class="lang-toggle">
+    <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
   </div>
 
   <div class="container">
@@ -106,7 +116,7 @@
       <blockquote id="quote-de">
         „Therapie bedeutet, etwas herauszufinden. [...] Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“<br>– Ron Kurtz
       </blockquote>
-      <blockquote id="quote-en" style="display: none;">
+      <blockquote id="quote-en" style="display:none;">
         “Therapy is first about discovering [...] who you are in the very heart of yourself.”<br>– Ron Kurtz
       </blockquote>
       <img src="Pascal_Storz.jpg" alt="Pascal Storz" class="portrait" />
@@ -136,7 +146,7 @@
       <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
     </div>
 
-    <div class="column" id="profil-en" style="display: none;">
+    <div class="column" id="profil-en" style="display:none;">
       <h1>Pascal Storz<br>Psychotherapy and Coaching</h1>
       <ul>
         <li>Certified Hakomi therapist and trainer</li>
@@ -177,7 +187,7 @@
       </ul>
     </div>
 
-    <div class="column" id="links-en" style="display: none;">
+    <div class="column" id="links-en" style="display:none;">
       <h3>More about me</h3>
       <ul>
         <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
@@ -196,14 +206,17 @@
   </div>
 
   <script>
-    function showLang(lang) {
-      const showDE = lang === 'de';
-      document.getElementById('quote-de').style.display = showDE ? '' : 'none';
-      document.getElementById('quote-en').style.display = showDE ? 'none' : '';
-      document.getElementById('profil-de').style.display = showDE ? '' : 'none';
-      document.getElementById('profil-en').style.display = showDE ? 'none' : '';
-      document.getElementById('links-de').style.display = showDE ? '' : 'none';
-      document.getElementById('links-en').style.display = showDE ? 'none' : '';
+    function setLang(lang) {
+      const isDE = lang === 'de';
+      document.getElementById('quote-de').style.display = isDE ? '' : 'none';
+      document.getElementById('quote-en').style.display = isDE ? 'none' : '';
+      document.getElementById('profil-de').style.display = isDE ? '' : 'none';
+      document.getElementById('profil-en').style.display = isDE ? 'none' : '';
+      document.getElementById('links-de').style.display = isDE ? '' : 'none';
+      document.getElementById('links-en').style.display = isDE ? 'none' : '';
+
+      document.getElementById('btn-de').classList.toggle('active', isDE);
+      document.getElementById('btn-en').classList.toggle('active', !isDE);
     }
   </script>
 </body>
