@@ -5,149 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pascal Storz – Psychotherapie & Coaching</title>
   <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
+    @font-face {
+      font-family: 'Cigars';
+      src: url('Cigars-Medium.otf') format('opentype');
     }
+
+    body {
+      margin: 0;
+      font-family: 'Cigars', sans-serif;
+      background-color: #f7f4ef;
+      color: #333;
+    }
+
+    .language-switch {
+      text-align: right;
+      padding: 1rem;
+    }
+
+    .language-switch button {
+      margin-left: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      font-family: inherit;
+      font-size: 1rem;
+      background-color: #ddd;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
     .container {
-      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
+      gap: 2rem;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-top: 1.5rem;
+
+    .column {
+      flex: 1;
+      min-width: 260px;
     }
-    h2 {
-      margin-top: 2.5rem;
-      color: #555;
+
+    img.portrait {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 8px;
     }
-    p, li {
-      font-size: 1rem;
-    }
+
     blockquote {
       font-style: italic;
-      color: #666;
       border-left: 4px solid #ccc;
       padding-left: 1rem;
-      margin: 1.5rem 0;
+      margin: 1rem 0 2rem;
+      color: #555;
     }
+
+    h1 {
+      margin-top: 0;
+    }
+
     ul {
       padding-left: 1.2rem;
+      list-style: disc;
     }
-    .section {
-      margin-top: 3rem;
+
+    a {
+      color: #004466;
+      text-decoration: none;
     }
-    .lang-toggle {
-      text-align: right;
-      font-size: 0.9rem;
-      color: #999;
+
+    a:hover {
+      text-decoration: underline;
     }
-    @media (max-width: 600px) {
+
+    @media (max-width: 800px) {
       .container {
+        flex-direction: column;
         padding: 1rem;
+      }
+      .language-switch {
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-
-    <blockquote>
-      „Therapie bedeutet, etwas herauszufinden ... Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“
-      <br>– Ron Kurtz, Gründer der Hakomi®-Methode
-    </blockquote>
-
-    <h1>Pascal Storz<br>Psychotherapie und Coaching</h1>
-    <ul>
-      <li>Zertifizierter Hakomi Therapeut und Dozent (Trainer)</li>
-      <li>R-CS Therapeut und Facilitator</li>
-      <li>Heilpraktiker für Psychotherapie</li>
-    </ul>
-
-    <h2>Methoden</h2>
-    <ul>
-      <li>Hakomi – Achtsamkeitszentrierte Körperpsychotherapie</li>
-      <li>Re-Creation of the Self (R-CS)</li>
-    </ul>
-
-    <h2>Kontakt</h2>
-    <p>
-      +49 (0)176 650 37 164<br>
-      <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
-      Praxis am Ufer, Heckmannufer 6A<br>
-      10997 Berlin
-    </p>
-
-    <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
-
-    <h2>Weitere Informationen</h2>
-    <ul>
-      <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de/profil/pascal.storz</a></li>
-      <li><a href="https://hakomi.de/82/hakomi/lehrteam" target="_blank">hakomi.de/Lehrteam</a></li>
-      <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
-      <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
-    </ul>
-
-    <h2>Veranstaltungen, Workshops & Fortbildungen</h2>
-    <ul>
-      <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de – Terminübersicht</a></li>
-      <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de – Termine</a></li>
-      <li><a href="https://festivalsoma.com/events/" target="_blank">festivalsoma.com</a></li>
-      <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/" target="_blank">kientalerhof.ch</a></li>
-    </ul>
-
-    <hr class="section">
-
-    <blockquote>
-      “Therapy is first about discovering … It’s about who you are in the very heart of yourself.”
-      <br>— Ron Kurtz, Hakomi Founder
-    </blockquote>
-
-    <h1>Pascal Storz<br>Psychotherapy and Coaching</h1>
-    <ul>
-      <li>Certified Hakomi therapist and trainer</li>
-      <li>R-CS therapist and facilitator</li>
-      <li>Heilpraktiker für Psychotherapie</li>
-    </ul>
-
-    <h2>Approaches</h2>
-    <ul>
-      <li>Hakomi – Mindful Somatic Psychotherapy</li>
-      <li>Re-Creation of the Self (R-CS)</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>
-      +49 (0)176 650 37 164<br>
-      <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
-      Praxis am Ufer, Heckmannufer 6A<br>
-      10997 Berlin
-    </p>
-
-    <p><strong>My website is currently under construction</strong></p>
-
-    <h2>More about me</h2>
-    <ul>
-      <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de/profil/pascal.storz</a></li>
-      <li><a href="https://hakomi.de/82/hakomi/lehrteam" target="_blank">hakomi.de</a></li>
-      <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
-      <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
-    </ul>
-
-    <h2>Upcoming events, workshops and trainings</h2>
-    <ul>
-      <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de – events</a></li>
-      <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de – dates</a></li>
-      <li><a href="https://festivalsoma.com/events/" target="_blank">festivalsoma.com</a></li>
-      <li><a href="https://kientalerhof.ch/courses/methodenuebergreifende-fortbildung/innere-achtsamkeit-und-loving-presence-25101150/" target="_blank">kientalerhof.ch</a></li>
-    </ul>
-
-    <div class="lang-toggle">DE / EN</div>
+  <div class="language-switch">
+    <button onclick="showLanguage('de')">DE</button>
+    <button onclick="showLanguage('en')">EN</button>
   </div>
+
+  <div class="container">
+    <div class="column">
+      <blockquote id="quote-de">„Therapie bedeutet, etwas herauszufinden ... Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“<br>– Ron Kurtz</blockquote>
+      <blockquote id="quote-en" style="display:none;">“Therapy is first about discovering ... who you are in the very heart of yourself.”<br>– Ron Kurtz</blockquote>
+      <img src="Pascal_Storz.jpg" alt="Pascal Storz Portrait" class="portrait" />
+    </div>
+
+    <div class="column" id="text-de">
+      <h1>Pascal Storz<br>Psychotherapie und Coaching</h1>
+      <ul>
+        <li>Zertifizierter Hakomi Therapeut und Dozent (Trainer)</li>
+        <li>R-CS Therapeut und Facilitator</li>
+        <li>Heilpraktiker für Psychotherapie</li>
+      </ul>
+
+      <h3>Methoden</h3>
+      <ul>
+        <li>Hakomi – Achtsamkeitszentrierte Körperpsychotherapie</li>
+        <li>Re-Creation of the Self (R-CS)</li>
+      </ul>
+
+      <h3>Kontakt</h3>
+      <p>
+        +49 (0)176 650 37 164<br>
+        <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
+        Praxis am Ufer<br>
+        Heckmannufer 6A<br>
+        10997 Berlin
+      </p>
+
+      <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
+    </div>
+
+    <div class="column" id="text-en" style="display:none;">
+      <h1>Pascal Storz<br>Psychotherapy and Coaching</h1>
+      <ul>
+        <li>Certified Hakomi therapist and trainer</li>
+        <li>R-CS therapist and facilitator</li>
+        <li>Heilpraktiker für Psychotherapie</li>
+      </ul>
+
+      <h3>Approaches</h3>
+      <ul>
+        <li>Hakomi – Mindful Somatic Psychotherapy</li>
+        <li>Re-Creation of the Self (R-CS)</li>
+      </ul>
+
+      <h3>Contact</h3>
+      <p>
+        +49 (0)176 650 37 164<br>
+        <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
+        Praxis am Ufer<br>
+        Heckmannufer 6A<br>
+        10997 Berlin
+      </p>
+
+      <p><strong>My website is currently under construction</strong></p>
+    </div>
+  </div>
+
+  <script>
+    function showLanguage(lang) {
+      const deElements = document.querySelectorAll('#text-de, #quote-de');
+      const enElements = document.querySelectorAll('#text-en, #quote-en');
+      if (lang === 'de') {
+        deElements.forEach(el => el.style.display = '');
+        enElements.forEach(el => el.style.display = 'none');
+      } else {
+        enElements.forEach(el => el.style.display = '');
+        deElements.forEach(el => el.style.display = 'none');
+      }
+    }
+  </script>
 </body>
 </html>
