@@ -12,31 +12,42 @@
 
     body {
       margin: 0;
+      padding: 0;
       background-color: #4f9d95;
-      color: white;
+      color: black;
       font-family: 'Cigars', sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
+      font-size: 29px;
+      line-height: 35px;
     }
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1400px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+      padding: 15px;
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 2rem;
+      box-sizing: border-box;
     }
 
-    .column {
-      flex: 1;
-      min-width: 280px;
-      box-sizing: border-box;
-      padding: 1rem;
+    .col-span-2 {
+      grid-column: span 2;
+    }
+
+    .col-span-1 {
+      grid-column: span 1;
+    }
+
+    .portrait {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: auto;
     }
 
     h1 {
-      font-size: 2.2rem;
       margin-top: 0;
+      font-size: 1.5em;
     }
 
     h3 {
@@ -45,35 +56,25 @@
     }
 
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
     }
 
     a {
-      color: white;
+      color: black;
       text-decoration: underline;
     }
 
     blockquote {
-      font-style: italic;
-      border-left: 4px solid white;
-      padding-left: 1rem;
-      margin-bottom: 2rem;
+      margin: 0;
+      padding: 0;
     }
 
-    img.portrait {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    /* Sprachumschalter-Kreise */
     .lang-toggle {
       position: fixed;
       bottom: 20px;
       left: 20px;
       display: flex;
-      gap: 0.5rem;
+      gap: 10px;
       z-index: 1000;
     }
 
@@ -81,14 +82,13 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 2px solid black;
+      border: 1px solid black;
       background-color: transparent;
       color: black;
       font-family: inherit;
       font-size: 1rem;
       cursor: pointer;
       text-align: center;
-      line-height: 1;
       padding: 0;
     }
 
@@ -97,9 +97,16 @@
       color: #4f9d95;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .container {
-        flex-direction: column;
+        display: block;
+      }
+      .col-span-2, .col-span-1 {
+        grid-column: auto;
+        margin-bottom: 2rem;
+      }
+      .portrait {
+        max-width: 50%;
       }
     }
   </style>
@@ -112,18 +119,21 @@
 
   <div class="container">
     <!-- ZITAT -->
-    <div class="column">
-      <blockquote id="quote-de">
-        „Therapie bedeutet, etwas herauszufinden. [...] Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“<br>– Ron Kurtz
-      </blockquote>
-      <blockquote id="quote-en" style="display:none;">
-        “Therapy is first about discovering [...] who you are in the very heart of yourself.”<br>– Ron Kurtz
-      </blockquote>
-      <img src="Pascal_Storz.jpg" alt="Pascal Storz" class="portrait" />
+    <div class="col-span-2" id="quote-de">
+      <p>
+        „Therapie bedeutet, etwas herauszufinden. Sie dreht sich in erster Linie um Entdeckungen, nämlich um die Frage, wer du bist, und um deine tiefsten emotionalen Einstellungen. Es geht nicht nur darum, wer du glaubst, zu sein. Es geht nicht um etwas, dass du nur intellektuell begreifen kannst. Es geht darum, wer du im tiefsten Grunde deines Herzens bist.“  
+        – Ron Kurtz, Gründer der Hakomi®-Methode
+      </p>
+    </div>
+    <div class="col-span-2" id="quote-en" style="display:none;">
+      <p>
+        “Therapy is first about discovering. It’s about who you are and about what your deepest emotional attitudes are. It’s not just about who you think you are. It’s not opinion. It’s not something you can know with the intellect. It’s about who you are in the very heart of yourself. That’s the flavor of psychotherapy, discovering yourself, discovering your real attitudes toward the most important pieces of your life.”  
+        — Ron Kurtz, Hakomi Founder
+      </p>
     </div>
 
-    <!-- PROFIL -->
-    <div class="column" id="profil-de">
+    <!-- PROFIL DE -->
+    <div class="col-span-2" id="profil-de">
       <h1>Pascal Storz<br>Psychotherapie und Coaching</h1>
       <ul>
         <li>Zertifizierter Hakomi Therapeut und Dozent (Trainer)</li>
@@ -146,7 +156,8 @@
       <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
     </div>
 
-    <div class="column" id="profil-en" style="display:none;">
+    <!-- PROFIL EN -->
+    <div class="col-span-2" id="profil-en" style="display:none;">
       <h1>Pascal Storz<br>Psychotherapy and Coaching</h1>
       <ul>
         <li>Certified Hakomi therapist and trainer</li>
@@ -169,8 +180,12 @@
       <p><strong>My website is currently under construction</strong></p>
     </div>
 
-    <!-- LINKS -->
-    <div class="column" id="links-de">
+    <!-- PORTRAIT -->
+    <div class="col-span-1">
+      <img src="Pascal_Storz.jpg" alt="Pascal Storz" class="portrait" />
+    </div>
+    <!-- LINKS DE -->
+    <div class="col-span-2" id="links-de">
       <h3>Weitere Informationen</h3>
       <ul>
         <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
@@ -178,7 +193,7 @@
         <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
         <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
       </ul>
-      <h3>Veranstaltungen</h3>
+      <h3>Veranstaltungen, Workshops und Fortbildungen</h3>
       <ul>
         <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de Termine</a></li>
         <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de</a></li>
@@ -187,7 +202,8 @@
       </ul>
     </div>
 
-    <div class="column" id="links-en" style="display:none;">
+    <!-- LINKS EN -->
+    <div class="col-span-2" id="links-en" style="display:none;">
       <h3>More about me</h3>
       <ul>
         <li><a href="https://www.therapie.de/profil/pascal.storz/" target="_blank">therapie.de</a></li>
@@ -195,7 +211,7 @@
         <li><a href="https://hakomiinstitute.com/faculty/entry/pascal-2/" target="_blank">hakomiinstitute.com</a></li>
         <li><a href="https://organisches-selbst.de/team/" target="_blank">organisches-selbst.de</a></li>
       </ul>
-      <h3>Events & Workshops</h3>
+      <h3>Upcoming events, workshops and trainings</h3>
       <ul>
         <li><a href="https://hakomi.de/91/fortbildungen/terminuebersicht" target="_blank">hakomi.de events</a></li>
         <li><a href="https://organisches-selbst.de/termine/" target="_blank">organisches-selbst.de</a></li>
