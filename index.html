@@ -12,7 +12,7 @@
 
     body {
       margin: 0;
-      padding: 15px;
+      padding: 20px;
       background-color: #4f9d95;
       color: black;
       font-family: 'Cigars', sans-serif;
@@ -22,9 +22,9 @@
 
     .container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 15px;
-      max-width: calc(100vw - 30px);
+      grid-template-columns: 2fr 2fr 1fr;
+      gap: 20px;
+      max-width: calc(100vw - 40px);
       margin: 0 auto;
     }
 
@@ -36,7 +36,6 @@
 
     .portrait {
       width: 100%;
-      max-width: 100%;
       height: auto;
       border-radius: 8px;
       margin-top: 2rem;
@@ -51,6 +50,10 @@
     ul {
       padding-left: 1.5rem;
       margin: 0 0 2rem 0;
+    }
+
+    li {
+      line-height: 32px;
     }
 
     a {
@@ -68,23 +71,22 @@
       bottom: 20px;
       left: 20px;
       display: flex;
-      gap: 12px;
+      gap: 14px;
       z-index: 1000;
     }
 
     .lang-toggle button {
-      width: 50px;
-      height: 50px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
       border: 1px solid black;
       background-color: transparent;
       color: black;
       font-family: inherit;
       font-size: 26px;
-      cursor: pointer;
-      text-align: center;
       line-height: 1;
-      padding: 0;
+      padding-top: 4px; /* optisch mittiger */
+      cursor: pointer;
     }
 
     .lang-toggle button.active {
@@ -96,6 +98,7 @@
       .container {
         display: block;
       }
+
       .portrait {
         width: 50%;
         max-width: 200px;
@@ -139,12 +142,12 @@
       </ul>
       <p>Kontakt:<br>
         +49 (0)176 650 37 164<br>
-        <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
+        <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br><br>
         Praxis am Ufer<br>
         Heckmannufer 6A<br>
         10997 Berlin
       </p>
-      <p><strong>Meine Website ist derzeit im Aufbau</strong></p>
+      <p>Meine Website ist derzeit im Aufbau</p>
     </div>
 
     <div id="profil-en" style="display:none;">
@@ -161,15 +164,15 @@
       </ul>
       <p>Contact:<br>
         +49 (0)176 650 37 164<br>
-        <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br>
+        <a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br><br>
         Praxis am Ufer<br>
         Heckmannufer 6A<br>
         10997 Berlin
       </p>
-      <p><strong>My website is currently under construction</strong></p>
+      <p>My website is currently under construction</p>
     </div>
 
-    <!-- SPALTE 3: Bild & Links -->
+    <!-- SPALTE 3: Portrait & Links -->
     <div class="portrait-container">
       <div id="links-de">
         <p>Weitere Informationen:</p>
