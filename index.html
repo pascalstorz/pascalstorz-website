@@ -34,9 +34,10 @@
     .portrait-col { grid-column: 5 / span 1; }
 
     p, li {
-      line-height: 32px;
-      margin: 0;
-      padding: 0;
+      display: list-item;
+      line-height: 32px !important;
+      margin: 0 !important;
+      padding: 0 !important;
       margin: 0 0 1rem 0;
       font-size: inherit;
       font-weight: normal;
@@ -51,8 +52,7 @@
 
     a {
       color: black;
-      text-decoration: none;
-      border-bottom: 1px solid black;
+      text-decoration: underline;
     }
 
     .portrait {
@@ -165,7 +165,7 @@
     </div>
 
     <div class="portrait-col">
-      <img src="Pascal_Storz.jpg" alt="Pascal Storz Portrait" class="portrait" style="align-self: start;" />
+      <img src="Pascal_Storz.jpg" alt="Pascal Storz Portrait" class="portrait" style="align-self: start !important;" />
     </div>
   </div>
 
