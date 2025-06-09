@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -31,12 +32,9 @@
     .spalte1 { grid-column: 1 / span 2; }
     .spalte2 { grid-column: 3 / span 2; }
     .spalte3 { grid-column: 5 / span 2; }
-    .portrait-col { grid-column: 5 / span 1; }
+    .portrait-col { grid-column: 5; align-self: start; }
 
-    p, ul li {
-      line-height: 32px;
-      margin: 0;
-      padding: 0;
+    p {
       margin: 0 0 1rem 0;
       font-size: inherit;
       font-weight: normal;
@@ -49,9 +47,16 @@
       list-style: disc;
     }
 
+    ul li {
+      line-height: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
     a {
       color: black;
       text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
 
     .portrait {
@@ -131,7 +136,7 @@
     </div>
 
     <div class="spalte2" id="profil-en" style="display:none;">
-      <p>Pascal Storz<br>Psychotherapy and Coaching</p>
+      <p>Pascal Storz<br>Psychotherapy and Coaching</p><br>
       <ul>
         <li>Certified Hakomi therapist and trainer</li>
         <li>R-CS therapist and facilitator</li>
@@ -143,7 +148,7 @@
         <li>Re-Creation of the Self (R-CS)</li>
       </ul>
       <p>Contact:<br>+49 (0)176 650 37 164<br><a href="mailto:info@pascalstorz.com">info@pascalstorz.com</a><br><br>Praxis am Ufer<br>Heckmannufer 6A<br>10997 Berlin</p>
-      <p>My website is currently under construction</p>
+      <br><p>My website is currently under construction</p>
     </div>
 
     <div class="spalte3" id="links-de">
@@ -163,10 +168,11 @@
       </ul>
     </div>
 
-    <div id="links-en" style="display:none;"></div>
-<div class="portrait-col" style="align-self:start;">
+    <div class="portrait-col">
       <img src="Pascal_Storz.jpg" alt="Pascal Storz Portrait" class="portrait" />
     </div>
+
+    <div id="links-en" style="display:none;"></div>
   </div>
 
   <script>
@@ -177,7 +183,7 @@
       document.getElementById('profil-de').style.display = isDE ? '' : 'none';
       document.getElementById('profil-en').style.display = isDE ? 'none' : '';
       document.getElementById('links-de').style.display = isDE ? '' : 'none';
-      document.getElementById('links-en')?.style.display = isDE ? 'none' : '';
+      document.getElementById('links-en').style.display = isDE ? 'none' : '';
       document.getElementById('btn-de').classList.toggle('active', isDE);
       document.getElementById('btn-en').classList.toggle('active', !isDE);
     }
